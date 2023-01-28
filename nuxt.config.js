@@ -1,27 +1,67 @@
 import colors from 'vuetify/es5/util/colors'
 
 export default {
+  publicRuntimeConfig: {
+  },
+  // View your app on another device
+  server: {
+    port: 1440, // default: 3000
+    host: '0.0.0.0' // default: localhost
+  },
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
-  ssr: false,
+  ssr: true,
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    titleTemplate: '%s - area-51',
-    title: 'area-51',
+    titleTemplate: '%s - Home',
+    title: 'Area-51',
     meta: [
       { charset: 'utf-8' },
-      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
-      { hid: 'description', name: 'description', content: '' },
-      { name: 'format-detection', content: 'telephone=no' },
+      { hid: 'viewport', name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: 'DESC HERE' },
+      { hid: 'format-detection', name: 'format-detection', content: '' },
+      { hid: 'theme-color', name: 'theme-color', content: '#00346A' },
+      // Open Graph / Facebook
+      { hid: 'og:site_name', name: 'og:site_name', content: 'IV-CODE.io' },
+      { hid: 'og:type', name: 'og:type', content: 'website' },
+      { hid: 'og:url', name: 'og:url', content: 'https://iv-code.io/' },
+      { hid: 'og:title', name: 'og:title', content: 'IV-CODE.io' },
+      { hid: 'og:description', name: 'og:description', content: 'DESC HERE' },
+      { hid: 'og:image', name: 'og:image', content: 'https://ik.imagekit.io/invimgs0101/IV-CODE/logos/ivcode-logo/Wolf_WHITE_TQ9YPD0KD.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656026848531' },
+      { hid: 'og:image:width', name: 'og:image:width', content: '1280' },
+      { hid: 'og:image:height', name: 'og:image:height', content: '720' },
+      // Twitter
+      { hid: 'twitter:card', name: 'twitter:card', content: 'summary_large_image' },
+      { hid: 'twitter:url', name: 'twitter:url', content: 'https://iv-code.io/' },
+      { hid: 'twitter:title', name: 'twitter:title', content: 'IV-CODE' },
+      { hid: 'twitter:description', name: 'twitter:description', content: 'DESC HERE' },
+      { hid: 'twitter:image', name: 'twitter:image', content: 'https://ik.imagekit.io/invimgs0101/IV-CODE/logos/ivcode-logo/Wolf_WHITE_TQ9YPD0KD.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656026848531' }
     ],
-    link: [{ rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }],
+    link: [
+      // Tab Icon
+      { hid: '"apple-touch-icon', rel: 'apple-touch-icon', sizes: '180x180', href: 'https://ik.imagekit.io/invimgs0101/IV-CODE/logos/ivcode-logo/Wolf_WHITE_TQ9YPD0KD.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656026848531' },
+      { hid: 'icon', rel: 'icon', type: 'image/x-icon', href: 'https://ik.imagekit.io/invimgs0101/IV-CODE/logos/ivcode-logo/Wolf_WHITE_TQ9YPD0KD.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656026848531' },
+      // Fonts API
+      // SEO Tags
+      { hid: 'shortcut icon', rel: 'shortcut icon', type: 'image/x-icon', href: 'https://ik.imagekit.io/invimgs0101/IV-CODE/logos/ivcode-logo/Wolf_WHITE_TQ9YPD0KD.png?ik-sdk-version=javascript-1.4.3&updatedAt=1656026848531' },
+      { hid: 'canonical', rel: 'canonical', href: 'https://iv-code.io/' },
+      // Load Speed
+      { hid: 'canonical', rel: 'preconnect', href: 'https://ik.imagekit.io' }
+    ],
+    // Page Language
+    htmlAttrs: {
+      lang: 'en'
+    }
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: [
+    '~assets/global.css'
+  ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: [
+  ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
@@ -31,41 +71,60 @@ export default {
     // https://go.nuxtjs.dev/eslint
     '@nuxtjs/eslint-module',
     // https://go.nuxtjs.dev/vuetify
-    '@nuxtjs/vuetify',
+    '@nuxtjs/vuetify'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
+    // Auto Sitemap - /sitemap.xml - SEO
+    '@nuxtjs/sitemap'
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: 'en',
-    },
+      lang: 'en'
+    }
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
   vuetify: {
     customVariables: ['~/assets/variables.scss'],
     theme: {
-      dark: true,
+      dark: false,
       themes: {
         dark: {
-          primary: colors.blue.darken2,
-          accent: colors.grey.darken3,
-          secondary: colors.amber.darken3,
+          primary: '#00346A',
+          accent: '0D6EB7',
+          secondary: 'CE1628',
           info: colors.teal.lighten1,
           warning: colors.amber.base,
           error: colors.deepOrange.accent4,
-          success: colors.green.accent3,
+          success: colors.green.accent3
         },
-      },
-    },
+        light: {
+          primary: '#00346A',
+          accent: '0D6EB7',
+          secondary: 'CE1628',
+          info: colors.teal.lighten1,
+          warning: colors.amber.base,
+          error: colors.deepOrange.accent4,
+          success: colors.green.accent3
+        }
+      }
+    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
-  build: {},
+  build: {
+    transpile: [
+    ],
+    /*
+    ** You can extend webpack config here
+    */
+    extend (config, ctx) {
+    }
+  }
 }
