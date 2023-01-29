@@ -1,5 +1,5 @@
 <template>
-  <v-footer class="black pt-10">
+  <v-footer class="black pt-4 mt-10">
     <!-- XS-XL -->
     <v-card elevation="0" flat class="transparent">
       <v-row>

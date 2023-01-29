@@ -2,7 +2,96 @@
   <v-row class="mx-0 px-0">
     <v-col cols="0" lg="1" xl="2" class="pa-0" />
     <v-col cols="12" lg="10" xl="8">
-      <h1 class="text-h1"><b>AREA-51</b></h1>
+      <v-row>
+        <!-- Intro section -->
+        <v-col cols="12">
+          <v-row class="mt-8 flex-column-reverse flex-md-row">
+            <!-- Copy -->
+            <v-col cols="12" md="5">
+              <v-card elevation="0" flat class="pa-2 pa-sm-8">
+                <h1 class="text-h2 text-md-h1 mb-8"><b>AREA-51</b></h1>
+                <p>The Future of IV-CODE</p>
+                <p>
+                  We believe that the future of IV-CODE lies with NUXT. We're
+                  taking our product to the next level and making it easier than
+                  ever to integrate AR, VR, and other technologies into your
+                  projects!
+                </p>
+                <p class="d-none d-sm-flex">
+                  We know you're excited about this new development, but don't
+                  worry—we've got your back. You can still use IV-CODE in its
+                  current form until we complete testing on our new platform.
+                  Check back soon for more information!
+                </p>
+                <v-btn class="black white--text">View Projects</v-btn>
+                <v-btn outlined class="black--text">About Me</v-btn>
+              </v-card>
+            </v-col>
+            <!-- Drone IMG -->
+            <v-col cols="12" md="7">
+              <v-img
+                contain
+                :height="introImageH"
+                class="mt-8"
+                src="https://ik.imagekit.io/invimgs0101/Area-51/Main_Assets/drone-trans-02-cycles_OQPN5r2DT.png?ik-sdk-version=javascript-1.4.3&updatedAt=1674942059049"
+              >
+                <template #placeholder>
+                  <v-sheet color="grey lighten-4" class="fill-height mt-8">
+                    <v-skeleton-loader
+                      class="mx-auto grey lighten-4"
+                      type="image"
+                    />
+                  </v-sheet>
+                </template>
+              </v-img>
+            </v-col>
+          </v-row>
+        </v-col>
+        <!-- Projects Section -->
+        <v-col cols="12">
+          <v-row>
+            <!-- Projects Name & Cat -->
+            <v-col cols="12">
+              <p class="text-h3 text-sm-h2"><b>3D Projects</b></p>
+            </v-col>
+            <!-- Projects Cards -->
+            <v-col
+              v-for="(product, index) in projectsArray"
+              :key="`asset_index_${index}`"
+              :cols="projectCardsCol"
+            >
+              <v-card width="300" class="pa-4" elevation="4">
+                <v-img
+                  contain
+                  :height="projectCardsImgH"
+                  class="mt-8"
+                  :src="product.info[0].img"
+                >
+                  <template #placeholder>
+                    <v-sheet color="grey lighten-4" class="fill-height mt-8">
+                      <v-skeleton-loader
+                        class="mx-auto grey lighten-4"
+                        type="image"
+                      />
+                    </v-sheet>
+                  </template>
+                </v-img>
+                <v-card-actions style="border-top: 1px solid black">
+                  <v-row>
+                    <v-col cols="12" align="start">
+                      <p>
+                        <b>{{ product.info[0].name }}</b>
+                      </p>
+                      <!-- Connect -->
+                      <v-btn outlined class="black--text">View</v-btn>
+                    </v-col>
+                  </v-row>
+                </v-card-actions>
+              </v-card>
+            </v-col>
+          </v-row>
+        </v-col>
+      </v-row>
     </v-col>
   </v-row>
 </template>
@@ -19,146 +108,58 @@ export default {
   mixins: [aosMixin],
   // SEO
   data() {
-    return {
-      card01: true,
-      model: 0,
-      carouselImgs: [
-        {
-          id: 0,
-          src: 'https://ik.imagekit.io/STBS/CUSA_Project/IMGS/tr:q-50/Red_Silver_Blue_PBR_7_hkbbMY8.png?ik-sdk-version=javascript-1.4.3&updatedAt=1666294764140',
-          alt: 'Three Colored layered Panels',
-        },
-      ],
-    }
+    return {}
   },
   computed: {
-    ...mapState({}),
+    ...mapState({
+      projectsArray: (state) => state.ThreeD.projectsArray,
+    }),
     introImageH() {
       switch (this.$vuetify.breakpoint.name) {
         case 'xs':
-          return 400
+          return 300
         case 'sm':
-          return 450
+          return 400
         case 'md':
           return 500
         case 'lg':
-          return 525
+          return 600
         case 'xl':
           return 600
         default:
-          return 600
+          return 400
       }
     },
-    introPassage() {
+    projectCardsCol() {
       switch (this.$vuetify.breakpoint.name) {
         case 'xs':
-          return 320
+          return 12
         case 'sm':
-          return 600
+          return 6
         case 'md':
-          return 800
+          return 3
         case 'lg':
-          return 800
+          return 3
         case 'xl':
-          return 800
+          return 3
         default:
-          return 600
+          return 6
       }
     },
-    actionTwoIH() {
+    projectCardsImgH() {
       switch (this.$vuetify.breakpoint.name) {
         case 'xs':
+          return 100
+        case 'sm':
           return 200
-        case 'sm':
-          return 300
         case 'md':
-          return 400
-        case 'lg':
           return 300
-        case 'xl':
-          return 300
-        default:
-          return 300
-      }
-    },
-    accreditedIH() {
-      switch (this.$vuetify.breakpoint.name) {
-        case 'xs':
-          return 250
-        case 'sm':
-          return 360
-        case 'md':
-          return 360
         case 'lg':
           return 400
         case 'xl':
-          return 460
+          return 500
         default:
-          return 300
-      }
-    },
-    iasImgH() {
-      switch (this.$vuetify.breakpoint.name) {
-        case 'xs':
-          return 100
-        case 'sm':
-          return 100
-        case 'md':
-          return 100
-        case 'lg':
-          return 125
-        case 'xl':
-          return 125
-        default:
-          return 100
-      }
-    },
-    accreditedCSS() {
-      switch (this.$vuetify.breakpoint.name) {
-        case 'xs':
-          return 'black--text'
-        case 'sm':
-          return 'black--text'
-        case 'md':
-          return 'borderLeft mt-9'
-        case 'lg':
-          return 'borderLeft mt-12'
-        case 'xl':
-          return 'borderLeft mt-15'
-        default:
-          return 'borderLeft mt-15'
-      }
-    },
-    hrIH() {
-      switch (this.$vuetify.breakpoint.name) {
-        case 'xs':
-          return 0
-        case 'sm':
-          return 0
-        case 'md':
-          return 300
-        case 'lg':
-          return 360
-        case 'xl':
-          return 420
-        default:
-          return 300
-      }
-    },
-    hrIW() {
-      switch (this.$vuetify.breakpoint.name) {
-        case 'xs':
-          return 0
-        case 'sm':
-          return 0
-        case 'md':
-          return 460
-        case 'lg':
-          return 560
-        case 'xl':
-          return 660
-        default:
-          return 460
+          return 200
       }
     },
   },

@@ -3,7 +3,7 @@ import getters from './getters'
 import actions from './actions'
 import mutations from './mutations'
 
-const Summary = {
+const ThreeD = {
   namespaced: true,
   state,
   getters,
@@ -11,4 +11,4 @@ const Summary = {
   mutations
 }
 
-export default Summary
+export default ThreeD

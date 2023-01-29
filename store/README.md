@@ -16,6 +16,4 @@ Notes Reagarding VueX Setup:
 
 2. Main is used as state management for the overall website & settings
 
-3. Summary is used as the state management for project overviews that link to the project
-   it's documenting. Each actual live project is linked from the summary data even though the project
-   are internal & not external projects link wise.
+3. Looped Pages with varying templates based on type of project
