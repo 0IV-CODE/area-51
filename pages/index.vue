@@ -83,7 +83,13 @@
                         <b>{{ product.info[0].name }}</b>
                       </p>
                       <!-- Connect -->
-                      <v-btn outlined class="black--text">View</v-btn>
+                      <v-btn
+                        link
+                        :to="product.info[0].summaryLink"
+                        outlined
+                        class="black--text"
+                        >View</v-btn
+                      >
                     </v-col>
                   </v-row>
                 </v-card-actions>

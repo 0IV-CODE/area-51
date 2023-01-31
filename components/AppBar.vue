@@ -170,18 +170,6 @@
               >
                 {{ item.name }}
               </v-list-item>
-              <!-- Documents -->
-              <v-list-item
-                v-else
-                id="hF"
-                link
-                class="black--text"
-                target="_blank"
-                rel="external"
-                :href="goToDoc(item.name)"
-              >
-                {{ item.name }}
-              </v-list-item>
             </template>
           </v-autocomplete>
         </v-col>
@@ -263,18 +251,6 @@
                       class="black--text"
                       rel="next"
                       :to="goTo(item.id)"
-                    >
-                      {{ item.name }}
-                    </v-list-item>
-                    <!-- Documents -->
-                    <v-list-item
-                      v-else
-                      id="hF"
-                      link
-                      class="black--text"
-                      target="_blank"
-                      rel="external"
-                      :href="goToDoc(item.name)"
                     >
                       {{ item.name }}
                     </v-list-item>
@@ -418,9 +394,8 @@ export default {
       revInnerThree: (state) => state.main.revInnerThree,
       showbarMain: (state) => state.main.showbarMain,
       // Data
-      productsArr: (state) => state.products.productsArr,
+      projectsArray: (state) => state.ThreeD.projectsArray,
       pageItems: (state) => state.main.items,
-      catDocuments: (state) => state.documents.catDocuments,
     }),
     theme() {
       return this.$vuetify.theme.isDark ? 'dark' : 'light'
@@ -462,11 +437,7 @@ export default {
       this.isLoading = true
       // Lazily load input items
       // Combine both arrays & duplicate to var
-      const threeArrays = [
-        ...this.productsArr,
-        ...this.pageItems,
-        ...this.catDocuments,
-      ]
+      const threeArrays = [...this.projectsArray, ...this.pageItems]
       this.entries = threeArrays
       this.isLoading = false
     },
@@ -495,7 +466,7 @@ export default {
     },
     // Search
     qa(key) {
-      const threeArrays = [...this.productsArr, ...this.pageItems]
+      const threeArrays = [...this.projectsArray, ...this.pageItems]
       return threeArrays.filter((item) => item.key === key)
     },
     // goTo function is passed params from btn for looped component
@@ -519,27 +490,15 @@ export default {
         const path = this.pathName
 
         // If link too /IN/Products other product Loop
-        if (path.includes('IN/Products') === true) {
+        if (path.includes('/threeD/') === true) {
           const routeName = id
           return routeName
         } else {
           // if link too /IN/Products if on other IN
-          const routeName = '../' + 'IN/Products/' + id
+          const routeName = '../' + 'threeD/' + id
           return routeName
         }
       }
-    },
-    goToDoc(thisName) {
-      // Document Link
-      const arrD = [...this.catDocuments]
-      let docLink = ''
-      for (let i = 0; i < arrD.length; i++) {
-        if (thisName === arrD[i].name) {
-          docLink = arrD[i].children[0].header
-        }
-      }
-      const routeName = docLink
-      return routeName
     },
   },
 }

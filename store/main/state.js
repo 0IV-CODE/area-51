@@ -16,12 +16,12 @@ export default () => ({
       {
         id: 81,
         name: 'All',
-        to: '/IN/AllProducts'
+        to: '/Main/AllProjects'
       },
       {
         id: 82,
-        name: 'Panel',
-        to: '/IN/AllProducts?tab=Panel'
+        name: '3D',
+        to: '/Main/AllProjects?tab=3D'
       },
       // {
       //   id: 83,
@@ -77,24 +77,6 @@ export default () => ({
       }
   
     ],
-    // Object Load Variables
-    // Image & 3D Section
-    colLeft: 12,
-    mdLeft: 8,
-    lgLeft: 8,
-    xlLeft: 8,
-    // Lorem Section
-    colRight: 12,
-    mdRight: 4,
-    lgRight: 4,
-    xlRight: 4,
-    // canvas - containerW standard values
-    mdCanvasWidth: 305,
-    lgCanvasWidth: 450,
-    xlCanvasWidth: 500,
-    // canvas - containerH standard values
-    mdCanvasHeight: 350,
-    lgCanvasHeight: 375,
-    xlCanvasHeight: 400
+  
   })
   
