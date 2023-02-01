@@ -143,32 +143,32 @@ export default {
     // ADD SCENE
     // Note: hdri texture doesn't load in xs, so added lights as backup
     this.scene = new THREE.Scene()
-    this.scene.background = new THREE.Color(0x000000)
+    this.scene.background = new THREE.Color(0xffffff)
 
     // ADD LIGHT TO SCENE
-    // Light 1 - White
-    this.pointLight1 = new THREE.PointLight(0xffffff, 1)
-    this.pointLight1.position.set(-1.86, 1, -1.65)
-    this.pointLight1.intensity = 200
-    this.scene.add(this.pointLight1)
+    // // Light 1 - White
+    // this.pointLight1 = new THREE.PointLight(0xffffff, 1)
+    // this.pointLight1.position.set(-1.86, 1, -1.65)
+    // this.pointLight1.intensity = 200
+    // this.scene.add(this.pointLight1)
 
-    // Light 2 - white
-    this.pointLight2 = new THREE.PointLight(0xffffff, 2)
-    this.pointLight2.position.set(2.13, -3, -1.98)
-    this.pointLight2.intensity = 300
-    this.scene.add(this.pointLight2)
+    // // Light 2 - white
+    // this.pointLight2 = new THREE.PointLight(0xffffff, 2)
+    // this.pointLight2.position.set(2.13, -3, -1.98)
+    // this.pointLight2.intensity = 300
+    // this.scene.add(this.pointLight2)
 
-    // Light 3 - White
-    this.pointLight3 = new THREE.PointLight(0xffffff, 1)
-    this.pointLight3.position.set(0, 0, 4)
-    this.pointLight3.intensity = 100
-    this.scene.add(this.pointLight3)
+    // // Light 3 - White
+    // this.pointLight3 = new THREE.PointLight(0xffffff, 1)
+    // this.pointLight3.position.set(0, 0, 4)
+    // this.pointLight3.intensity = 100
+    // this.scene.add(this.pointLight3)
 
-    // Light 4 - White
-    this.pointLight4 = new THREE.PointLight(0xffffff, 1)
-    this.pointLight4.position.set(0, 3, 0)
-    this.pointLight4.intensity = 25
-    this.scene.add(this.pointLight4)
+    // // Light 4 - White
+    // this.pointLight4 = new THREE.PointLight(0xffffff, 1)
+    // this.pointLight4.position.set(0, 3, 0)
+    // this.pointLight4.intensity = 25
+    // this.scene.add(this.pointLight4)
 
     // SET GRID HELPER
     const size = 5

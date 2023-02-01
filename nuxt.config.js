@@ -2,7 +2,21 @@ import colors from 'vuetify/es5/util/colors'
 
 export default {
   publicRuntimeConfig: {
+    E_API_KEY: process.env.E_API_KEY,
+    E_TEMPLATE_ID: process.env.E_TEMPLATE_ID,
+    E_PUBLIC_USER_ID: process.env.E_PUBLIC_USER_ID,
+    E_SERVICE_ID: process.env.E_SERVICE_ID,
+    recaptcha: {
+      /* reCAPTCHA options */
+      hideBadge: 0, // Hide badge element (v3 & v2 via size=invisible)
+      language: 'English', // Recaptcha language (v2)
+      mode: 'base', // Mode: 'base', 'enterprise'
+      siteKey: process.env.R_SITE_KEY,
+      version: 2, // Version
+      size: 'normal' // Size: 'compact', 'normal', 'invisible' (v2)
+    }
   },
+  
   // View your app on another device
   server: {
     port: 1440, // default: 3000
@@ -79,7 +93,9 @@ export default {
     // https://go.nuxtjs.dev/pwa
     '@nuxtjs/pwa',
     // Auto Sitemap - /sitemap.xml - SEO
-    '@nuxtjs/sitemap'
+    '@nuxtjs/sitemap',
+    // https://www.npmjs.com/package/@nuxtjs/recaptcha
+    '@nuxtjs/recaptcha'
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa

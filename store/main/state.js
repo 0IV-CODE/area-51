@@ -52,7 +52,7 @@ export default () => ({
       {
         id: 88,
         name: 'Contact',
-        to: '/ContactUs'
+        to: '/Main/ContactUs'
       },
       {
         id: 89,
@@ -73,7 +73,7 @@ export default () => ({
       {
         id: 92,
         name: 'Privacy Policy',
-        to: '/PrivacyPolicy'
+        to: '/Main/PrivacyPolicy'
       }
   
     ],

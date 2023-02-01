@@ -26,29 +26,23 @@
               class="grey lighten-4"
             />
             <!-- Image -->
-            <v-card class="pa-6">
-              <div v-if="!show">
-                <v-img
-                  :src="thisObject.info[0].img"
-                  contain
-                  :height="containerH"
-                >
-                  <template #placeholder>
-                    <v-row
-                      class="fill-height ma-0"
-                      align="center"
-                      justify="center"
-                    >
-                      <v-progress-circular
-                        role="progressbar"
-                        indeterminate
-                        color="primary"
-                      />
-                    </v-row>
-                  </template>
-                </v-img>
-              </div>
-            </v-card>
+            <div v-if="!show">
+              <v-img :src="thisObject.info[0].img" contain :height="containerH">
+                <template #placeholder>
+                  <v-row
+                    class="fill-height ma-0"
+                    align="center"
+                    justify="center"
+                  >
+                    <v-progress-circular
+                      role="progressbar"
+                      indeterminate
+                      color="primary"
+                    />
+                  </v-row>
+                </template>
+              </v-img>
+            </div>
             <v-row class="mt-1">
               <v-col cols="4">
                 <!-- Toggle 3D Model -->

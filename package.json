@@ -13,7 +13,9 @@
     "lintfix": "prettier --write --list-different . && npm run lint:js -- --fix"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@nuxtjs/pwa": "^3.3.5",
+    "@nuxtjs/recaptcha": "^1.1.1",
     "@nuxtjs/sitemap": "^2.4.0",
     "aos": "^2.3.4",
     "core-js": "^3.25.3",

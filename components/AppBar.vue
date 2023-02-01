@@ -110,7 +110,7 @@
                 class="grey lighten-4 rounded-lg mx-2 my-2 primary--text"
                 nuxt
                 rel="next"
-                to="/ContactUs"
+                to="/Main/ContactUs"
               >
                 <v-list-item-title id="hF" class="font-size-plus">
                   Contact
@@ -120,7 +120,7 @@
                 class="grey lighten-4 rounded-lg mx-2 my-2 primary--text"
                 nuxt
                 rel="next"
-                to="/PrivacyPolicy"
+                to="/Main/PrivacyPolicy"
               >
                 <v-list-item-title id="hF" class="font-size-plus">
                   Privacy Policy
@@ -274,7 +274,7 @@
             v-bind="attrs"
             nuxt
             rel="next"
-            to="/ContactUs"
+            to="/Main/ContactUs"
             class="mx-2 mx-md-4 d-none d-md-flex"
             v-on="on"
           >
