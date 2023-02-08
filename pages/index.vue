@@ -8,7 +8,7 @@
           <v-row class="mt-8 flex-column-reverse flex-md-row">
             <!-- Copy -->
             <v-col cols="12" md="5">
-              <v-card elevation="0" flat class="pa-2 pa-sm-8">
+              <v-card elevation="0" flat class="pa-npm 2 pa-sm-8">
                 <h1 class="text-h2 text-md-h1 mb-8"><b>AREA-51</b></h1>
                 <p>The Future of IV-CODE</p>
                 <p>
