@@ -195,13 +195,12 @@ export default {
   head() {
     return {
       // sets tab name
-      titleTemplate: `%s - Product - ${this.thisObject.name}`,
+      titleTemplate: `%s - Project - ${this.thisObject.name}`,
       meta: [
         {
           hid: 'description',
           name: 'description',
-          content:
-            "Have any questions about our products don't hesitate to view our resources page or get in contact with a representative using our contact form.",
+          content: 'Some of my Projects',
         },
       ],
     }

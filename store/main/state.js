@@ -23,21 +23,6 @@ export default () => ({
         name: '3D',
         to: '/Main/AllProjects?tab=3D'
       },
-      // {
-      //   id: 83,
-      //   name: 'Frame',
-      //   to: '/IN/AllProducts?tab=Frame'
-      // },
-      // {
-      //   id: 84,
-      //   name: 'Trim',
-      //   to: '/IN/AllProducts?tab=Trim'
-      // },
-      // {
-      //   id: 85,
-      //   name: 'Gauge',
-      //   to: '/IN/AllProducts?tab=Gauge'
-      // },
       // Main Pages
       {
         id: 86,
@@ -47,28 +32,13 @@ export default () => ({
       {
         id: 87,
         name: 'About',
-        to: '/About'
+        to: '/Main/About'
       },
       {
         id: 88,
         name: 'Contact',
         to: '/Main/ContactUs'
       },
-      {
-        id: 89,
-        name: 'Resources',
-        to: '/IN/Resources'
-      },
-      // {
-      //   id: 90,
-      //   name: 'AR Visualizer',
-      //   to: '/IN/ARVisualizer'
-      // },
-      // {
-      //   id: 91,
-      //   name: 'WEB Visualizer',
-      //   to: '/IN/WEBVisualizer'
-      // },
       // Policies
       {
         id: 92,

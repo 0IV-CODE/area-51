@@ -5,7 +5,7 @@
       <!-- Body -->
       <v-col col="12" md="10" lg="8" xl="6" align="center">
         <v-card align="start" class="white rounded-xl mx-2 mt-4" flat>
-          <h1 id="hF" align="center" class="text-h3 primary--text mb-8">
+          <h1 id="hF" align="center" class="text-h3 black--text mb-8">
             IV-CODE
           </h1>
           <p id="bF">
@@ -17,7 +17,7 @@
               href="https://www.iv-code.io"
               rel="next"
               target="_blank"
-              class="primary--text"
+              class="black--text"
               >https://www.iv-code.io</a
             >, and other sites we own and operate.
           </p>
@@ -267,7 +267,7 @@
           <p id="bF">The Team</p>
           <v-btn
             id="bF"
-            color="primary"
+            color="black"
             outlined
             rel="external"
             link

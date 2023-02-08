@@ -100,7 +100,7 @@
                 class="grey lighten-4 rounded-lg mx-2 my-2 primary--text"
                 nuxt
                 rel="next"
-                to="/About"
+                to="/Main/About"
               >
                 <v-list-item-title id="hF" class="font-size-plus">
                   About

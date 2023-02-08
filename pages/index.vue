@@ -23,8 +23,15 @@
                   current form until we complete testing on our new platform.
                   Check back soon for more information!
                 </p>
-                <v-btn class="black white--text">View Projects</v-btn>
-                <v-btn outlined class="black--text">About Me</v-btn>
+                <v-btn
+                  link
+                  to="/Main/AllProjects?tab=All"
+                  class="black white--text"
+                  >View Projects</v-btn
+                >
+                <v-btn link to="/Main/About" outlined class="black--text"
+                  >About Me</v-btn
+                >
               </v-card>
             </v-col>
             <!-- Drone IMG -->

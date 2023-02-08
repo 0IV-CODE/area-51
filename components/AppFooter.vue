@@ -29,14 +29,11 @@
                   <NuxtLink to="/" rel="next">
                     <p id="bF" class="white--text">Home</p>
                   </NuxtLink>
-                  <NuxtLink to="/About" rel="next">
+                  <NuxtLink to="/Main/About" rel="next">
                     <p id="bF" class="white--text">About</p>
                   </NuxtLink>
                   <NuxtLink to="/ContactUs" rel="next">
                     <p id="bF" class="white--text">Contact</p>
-                  </NuxtLink>
-                  <NuxtLink to="/IN/Resources" rel="next">
-                    <p id="bF" class="white--text">Resources</p>
                   </NuxtLink>
                 </v-col>
               </v-row>
