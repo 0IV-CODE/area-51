@@ -100,6 +100,16 @@
                 class="grey lighten-4 rounded-lg mx-2 my-2 primary--text"
                 nuxt
                 rel="next"
+                to="/Projects/GoogleSheets"
+              >
+                <v-list-item-title id="hF" class="font-size-plus">
+                  Google Sheets
+                </v-list-item-title>
+              </v-list-item>
+              <v-list-item
+                class="grey lighten-4 rounded-lg mx-2 my-2 primary--text"
+                nuxt
+                rel="next"
                 to="/Main/About"
               >
                 <v-list-item-title id="hF" class="font-size-plus">
@@ -332,7 +342,7 @@
           </v-slide-x-reverse-transition>
           <!-- Main Pages -->
           <v-list-item
-            v-for="(item, i) in pageItems.slice(3, 6)"
+            v-for="(item, i) in pageItems.slice(3, 7)"
             :key="i"
             :to="item.to"
             class="grey lighten-4 rounded-lg mx-2 my-2 primary--text"

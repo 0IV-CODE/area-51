@@ -83,6 +83,8 @@ export default {
     '@nuxtjs/sitemap',
     // https://www.npmjs.com/package/@nuxtjs/recaptcha
     // '@nuxtjs/recaptcha'
+    // https://www.npmjs.com/package/nuxt-google-sheets-parser
+    'nuxt-google-sheets-parser'
   ],
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa

@@ -42,6 +42,11 @@ export default () => ({
       // Policies
       {
         id: 92,
+        name: 'Google Sheets',
+        to: '/Projects/GoogleSheets'
+      },
+      {
+        id: 93,
         name: 'Privacy Policy',
         to: '/Main/PrivacyPolicy'
       }
